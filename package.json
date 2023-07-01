@@ -1,0 +1,26 @@
+{
+  "name": "qa-automation---juice-shop",
+  "version": "1.0.0",
+  "description": "A QA Automation Project",
+  "main": "index.js",
+  "scripts": {
+    "test-1st-story": "cypress run --spec cypress/e2e/1st_Story/Sign_up.cy.js --browser chrome",
+    "test-2nd-story": "cypress run --spec cypress/e2e/2nd_Story/payment_option.cy.js --browser chrome",
+    "test-3rd-story": "cypress run --spec cypress/e2e/3rd_Story/Add_items_to_basket.cy.js --browser chrome",
+    "test-all-stories": "npm run test-1st-story && npm run test-2nd-story && npm run test-3rd-story"
+  }
+  
+  ,
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.14.0",
+    "dotenv": "^16.3.1"
+  },
+  "cypress": {
+    "video": true,
+    "videoUploadOnPasses": true,
+    "videoCompression": false,
+    "videosFolder": "cypress/videos"
+  }
+}
